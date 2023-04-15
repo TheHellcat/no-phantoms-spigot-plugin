@@ -1,0 +1,11 @@
+main: net.hellcat.mc.plugins.nophantom.PhantomCage
+name: NoPhantoms
+version: 1.0.0
+description: Getting rid of those pesky Phantoms
+author: HELLCAT
+prefix: NoPhantoms
+api-version: 1.17
+authors:
+  - HELLCAT
+  - Struntzi
+  - Griefed
