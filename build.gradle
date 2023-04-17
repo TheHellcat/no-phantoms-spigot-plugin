@@ -1,3 +1,5 @@
+import java.nio.file.Files
+
 plugins {
     id 'java'
 }
@@ -21,3 +23,19 @@ test {
     useJUnitPlatform()
 }
 
+tasks.register('prepareDebugServer',Copy) {
+    File debugFolder = new File(projectDir,"debug")
+    File serverJar = new File(debugFolder,"server.jar")
+    // More versions at https://git.griefed.de/Griefed/ServerPackCreator/-/tree/main/serverpackcreator-api/src/jvmMain/resources/de/griefed/resources/manifests/mcserver
+    // See downloads.server.url
+    URL serverUrl = new URL("https://piston-data.mojang.com/v1/objects/f69c284232d7c7580bd89a5a4931c3581eae1378/server.jar")
+    InputStream serverIn
+    if (!debugFolder.isDirectory()) {
+        debugFolder.mkdir()
+    }
+    if (!serverJar.isFile()) {
+        serverIn = serverUrl.openStream()
+        Files.copy(serverIn,serverJar.toPath())
+        serverIn.close()
+    }
+}
