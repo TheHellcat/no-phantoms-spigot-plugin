@@ -3,10 +3,10 @@
     <option name="JAR_PATH" value="$PROJECT_DIR$/debug/server.jar" />
     <option name="VM_PARAMETERS" value="-DIReallyKnowWhatIAmDoingISwear" />
     <option name="PROGRAM_PARAMETERS" value="nogui" />
-    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/debug" />
+    <option name="WORKING_DIRECTORY" value="C:\Users\dhengstmann\Documents\no-phantoms-spigot-plugin\debug" />
     <option name="ALTERNATIVE_JRE_PATH" />
     <method v="2">
-      <option name="Gradle.BeforeRunTask" enabled="true" tasks="prepareDebugServer" externalProjectPath="$PROJECT_DIR$" vmOptions="" scriptParameters="" />
+      <option name="Gradle.BeforeRunTask" enabled="true" tasks="buildSpigot" externalProjectPath="$PROJECT_DIR$" vmOptions="" scriptParameters="" />
     </method>
   </configuration>
 </component>
